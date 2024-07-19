@@ -83,14 +83,13 @@
   }
   .footer .end{
       display: flex;
-      margin:0 135px;
-      padding-bottom: 30px;
+      align-items: center;
+      justify-content: space-between ;
+      padding: 20px  60px;
   
      
   }
   .footer .end_center{
-      margin-left:350px ;
-      margin-right: 320px;
       display: flex;
       align-items: center;
      
@@ -102,4 +101,8 @@
   i,img{
   cursor: pointer;
   }
-  /*detail*/
+  @media screen and ( max-width : 1440px) {
+    .footer .end_center{
+
+    }
+  }
