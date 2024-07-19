@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>Tài khoản</title>
+
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#" onsubmit="signup()">
+                <h1>Tạo tài khoản</h1>
+                <input type="text" placeholder="Name" id="Name1" />
+                <span id="errName"></span>
+                <input type="email" placeholder="Email" id="Email1"/>
+                <span id="errEmail"></span>
+                <input type="password" placeholder="Password" id="Password1" />
+                <span id="errPas"></span>
+                <button id="btn-signup">Đăng kí</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#" onsubmit="login()">
+                <h1>Đăng nhập</h1>
+                <input id="email" type="email" placeholder="Email" value="an@gmail.com" />
+                <input id="password" type="password" placeholder="Password" value="123456"/>
+                <a href="#">Quên mật khẩu?</a>
+                <button id="btn-login">Đăng nhập</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Hù !!</h1>
+                    <p>Bạn đã có tài khoản ?</p>
+                    <button class="ghost" id="signIn">Đăng nhập</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Xin chào..</h1>
+                    
+                    <p>Bạn chưa có tài khoản?</p>
+                    <button class="ghost" id="signUp">Đăng kí</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../jquery/jquery-3.6.4.js"></script>
+    <script src="../jquery/login.js"></script>
+    
+</body>
+</html>

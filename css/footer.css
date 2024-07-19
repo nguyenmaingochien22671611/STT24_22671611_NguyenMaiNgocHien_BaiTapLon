@@ -1,0 +1,105 @@
+
+/* */
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    background: #171717;
+    color: white;
+   
+  }
+  .footer .logo_end{
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+     
+  }.footer .subscribe .search{
+      position: relative;
+  }
+  .footer .subscribe i{
+      position: absolute;
+      left: 12px;
+      top: 10px;
+  }
+  .footer .subscribe_title,.footer .subscribe{
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+  }
+  .footer input[type="text"]{
+    position: relative;
+      width: 250px;
+      right: -5px;
+      height: 38px;
+      border-radius: 5px;
+      padding-left: 35px;
+      outline: none;
+      border: #171717;
+      background-color: #f3f4f6;
+  }
+  .footer input[type="submit"]{
+    background: blue;
+    color: azure;
+     
+      outline: none;
+      border: #171717;
+      
+      display: block;
+      height: 29px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      padding: 0 10px;
+      width: 120px;
+      height: 38px;
+      cursor: pointer;
+  }
+  .footer input[type="submit"]:hover{
+    background: azure;
+    color: black;
+  }
+  .footer .list{
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+  }
+  .footer .list_link p{
+  
+      margin-bottom: 15px;
+  }
+  .footer .list .list_link li{
+      list-style: none;
+      margin-bottom: 10px;
+  }
+  .footer select{
+      height: 30px;
+      width: 120px;
+      background-color: #f3f4f6;
+      border: #f3f4f6;
+  }
+  .footer .end{
+      display: flex;
+      margin:0 135px;
+      padding-bottom: 30px;
+  
+     
+  }
+  .footer .end_center{
+      margin-left:350px ;
+      margin-right: 320px;
+      display: flex;
+      align-items: center;
+     
+     
+  }
+  .footer .icon_link{
+      font-size: 25px;
+  }
+  i,img{
+  cursor: pointer;
+  }
+  /*detail*/

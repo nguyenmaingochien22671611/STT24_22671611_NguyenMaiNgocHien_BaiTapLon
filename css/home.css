@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+    cursor: pointer;
+}
+button{
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.addCart:hover{
+    opacity: 0.5;
+    transform: scaleX(1.1);
+    
+}
+img:hover{
+    
+    transform: scale(1.2);
+}
+.header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: black;
+    border-bottom: 1px solid black;
+    z-index: 10;
+    overflow: hidden;
+    position: fixed;
+}
+.menu{
+    display: flex;
+    
+}
+.menu li{
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;   
+}
+.menu li a::after{
+    content: '';
+    height: 5px;
+    width: 0;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    transition: 0.5s;
+}
+.menu li a:hover::after{
+    width: 100%;
+    transition: all 0.8s;
+}
+.header a{
+    display: block;
+    color: white;
+    padding: 15.5px 15px;
+}
+.logo{
+    overflow: hidden;
+    height: 100%;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+}
+.logo img{
+    position: relative;
+    top: -15px;
+    height: 100px;
+}
+.icon{
+    display: flex;
+    padding: 10px 15px;
+    align-items: center;
+}
+.signOut a{
+ height: 100%;
+ width: fit-content;
+ display: flex;
+ justify-content: center;
+ color: white;
+}
+.signOut a:hover{
+    opacity: 0.8;
+    transform: scale(0.9);
+}
+.banner{
+    background: url(../image/banner.jpg);
+    height: 100vh;
+    background-size: cover;
+    width: 100%;
+    background-color: red;
+    border-bottom: 1px solid black;
+}
+.banner p{
+    position: relative;
+    width: 80%;
+    color: azure;
+    top: 250px;
+    left: 150px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    z-index: 1;
+    text-align: center;
+}
+/* */
+
+.sp{
+    width: 100%;
+    border-bottom: 1px solid black;
+    
+}
+.sp,.tt{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.sp button,.tt button{
+    width: 150px;
+    margin: 30px 0;
+   border: none;
+    cursor: pointer;
+}
+.sp button a,.tt button a{
+    background-color: #3333f5;
+    color: white;
+    display: block;
+    height: 100%;
+    padding: 15px 0;
+}
+.sp button:hover a,.tt button:hover{
+    background-color: black;
+    color: white;
+}
+.sp_t,.tt_t{
+    text-align: center;
+    height: 30%;
+    padding-top: 80px;
+}
+.sp_bt,.tt_bt{
+    height: 70%;
+}
+.sp_bt img,.tt_bt img{
+    height: 300px;
+    width: 100%;
+}
+.sp_bt ul{
+    display: grid;
+    grid-template-columns: repeat(4,270px);
+    height: 100%;
+    gap: 10px;
+    border-radius: 15px;
+    align-items: center;
+    text-align: center;
+}
+.sp_bt ul li,.tt_bt ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    width: 100%;
+    color: black;
+    row-gap: 10px;
+    overflow: hidden;
+    
+}
+.sp_bt ul li p,.tt_bt ul li p{
+    display: block;
+    height: 70px;
+    width: 100%;
+    text-align: left;
+}
+.sp span {
+    color: brown;
+    font-size: 20px;
+}
+.tt_bt ul{
+    display: grid;
+    grid-template-columns: repeat(3,250px);
+    height: 100%;
+    gap: 10px;
+    border-radius: 15px;
+    align-items: center;
+    text-align: center;
+}
+
+
+

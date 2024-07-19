@@ -1,0 +1,148 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: black;
+    
+    border-bottom: 1px solid black;
+   
+    z-index: 1;
+    overflow: hidden;
+    position: fixed;
+}
+.menu{
+    display: flex;
+    
+}
+.menu li{
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;   
+}
+.menu li a::after{
+    content: '';
+    height: 5px;
+    width: 0;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    transition: 0.5s;
+}
+.menu li a:hover::after{
+    width: 100%;
+    transition: all 0.8s;
+}
+.header a{
+    display: block;
+    color: black;
+    height: 100%;
+    color: white;
+    padding: 15.5px 15px;
+}
+.logo{
+    overflow: hidden;
+    height: 100%;
+    width: 190px;
+    display: flex;
+    justify-content: center;
+}
+.logo img{
+    position: relative;
+    top: -15px;
+    height: 100px;
+}
+.icon{
+    display: flex;
+    align-items: center;
+}
+.signOut a{
+ height: 100%;
+ width: 190px;
+ display: flex;
+ justify-content: center;
+}
+.signOut a:hover{
+    opacity: 0.8;
+    transform: scale(0.9);
+}
+.namePage{
+    height: 160px;
+    position: relative;
+    top:80px;
+  
+}
+iframe{
+    width: 80%;
+    height: 70vh;
+    margin-bottom: 80px;
+}
+.lh{
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+    
+}
+.lh_l,.lh_r{
+    height: 60vh;
+    padding: 10px;
+    background-color: #f4f4f4;
+    overflow: hidden;
+    
+}
+.lh_l{
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+    letter-spacing: 1.5px;
+    width: 600vw;
+}
+.lh_l p{
+    width: 30vw;
+    font-size: medium;
+    text-align: center;
+}
+.lh_l span{
+ display: flex;
+ justify-content: center;
+ overflow: hidden;
+ align-items: center;
+ width: 100%;
+ height: 80px;
+ gap: 30px;
+}
+.lh_l span img{
+    height: 100%;
+}
+
+.lh_l  button{
+    height: 40px;
+    padding: 0 20px;
+    background-color: black;
+    border: none;
+    outline: none;
+    
+}
+.lh_l  button:hover{
+    transform: scale(1.2);
+}
+.lh_l  button a{
+    color: white;
+    font-weight: bold;
+}
