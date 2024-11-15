@@ -9,27 +9,73 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src=""></script>
+    <script>
+        // Định nghĩa dữ liệu sản phẩm (dữ liệu này có thể được lấy từ API hoặc một tệp khác)
+        const products = [
+            { id: 1, name: "Đàn piano Yamaha U1A", price: "75,000,000đ", description: "Đàn grand piano chất lượng cao", image: "../img/Đàn piano Yamaha U1A.png", keyFeatures: ["Âm thanh cá nhân hóa", "Chống ồn chủ động"] },
+            { id: 2, name: "Đàn Piano Yamaha UX30A", price: "159,500,000đ", description: "Đàn grand piano cao cấp", image: "../img/Đàn Piano Yamaha UX30A.jpg", keyFeatures: ["Âm thanh tuyệt vời", "Thiết kế sang trọng"] },
+            { id: 3, name: "Đàn Piano Điện Casio AP-460 BN", price: "13,500,000đ", description: "Đàn piano điện với nhiều tính năng tuyệt vời", image: "../img/Đàn Piano Điện Casio AP-460 BN.jpg", keyFeatures: ["Kích thước nhỏ gọn", "Dễ dàng vận chuyển"] },
+            
+            { id: 4, name: "Đàn Guitar Acoustic Morrison MGW 405CBK", price: "1,800,000đ", description: "Đàn Guitar Acoustic Morrison MGW 405CBK cao cấp", image: "../img/Đàn Guitar Acoustic Morrison MGW 405CBK.jpg", keyFeatures: ["Kích thước nhỏ gọn", "Dễ dàng vận chuyển"] },
+            { id: 5, name: "Đàn Guitar Acoustic, Guitar thùng - Yamaha F310 - Tobacco Brown Sunburst", price: "5,685,000đ", description: "Đàn Guitar Acoustic, Guitar thùng - Yamaha F310 - Tobacco Brown Sunburst cao cấp", image: "../img/Đàn Guitar Acoustic, Guitar thùng - Yamaha F310 - Tobacco Brown Sunburst.png", keyFeatures: ["Kích thước nhỏ gọn", "Dễ dàng vận chuyển"] },
+            { id: 6, name: "Đàn guitar Acoustic Yamaha JR2 Natural", price: "3,840,000đ", description: "Đàn guitar Acoustic Yamaha JR2 Natural cao cấp", image: "../img/Đàn guitar Acoustic Yamaha JR2 Natural.png", keyFeatures: ["Kích thước nhỏ gọn", "Dễ dàng vận chuyển"] },
+
+            { id: 7, name: "Bộ Trống Jazz Yamaha RDP 2F5", price: "10,250,000đ", description: "Bộ Trống Jazz Yamaha RDP 2F5 cao cấp", image: "../img/Bộ Trống Jazz Yamaha RDP 2F5.jpg", keyFeatures: ["Kích thước nhỏ gọn", "Dễ dàng vận chuyển"] },
+            { id: 8, name: "PEARL-RS525SC-C703", price: "5,685,000đ", description: "PEARL-RS525SC-C703 cao cấp", image: "../img/PEARL-RS525SC-C703.jpg", keyFeatures: ["Kích thước nhỏ gọn", "Dễ dàng vận chuyển"] },
+            { id: 9, name: "Bộ trống cơ Yamaha SBP0F4H", price: "15,890,000đ", description: "Bộ trống cơ Yamaha SBP0F4H cao cấp", image: "../img/Bộ trống cơ Yamaha SBP0F4H.jpg", keyFeatures: ["Kích thước nhỏ gọn", "Dễ dàng vận chuyển"] },
+        
+        
+        ];
+    
+        // Lấy id sản phẩm từ chuỗi truy vấn URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id'); // Lấy tham số 'id' từ URL
+    
+        // Tìm sản phẩm dựa trên id
+        const product = products.find(p => p.id === parseInt(productId));
+    
+        if (product) {
+            // Cập nhật trang chi tiết với thông tin sản phẩm
+            document.querySelector(".ctn_product_img").innerHTML = `<img src="${product.image}" alt="${product.name}">`;
+            document.querySelector(".ctn_product_detail_name").innerText = product.name;
+            document.querySelector(".ctn_product_detail_price").innerText = product.price;
+            document.querySelector(".ctn_product_detail_btn a").setAttribute('href', `../html/productList.html`);
+            
+            // Hiển thị các tính năng nổi bật của sản phẩm
+            const featuresContainer = document.querySelector(".ctn_product_detail_key-features div");
+            product.keyFeatures.forEach(feature => {
+                const p = document.createElement('p');
+                p.innerText = `- ${feature}`;
+                featuresContainer.appendChild(p);
+            });
+        } else {
+            // Nếu không tìm thấy sản phẩm, hiển thị thông báo lỗi
+            document.querySelector(".ctn_product_detail_name").innerText = "Sản phẩm không tìm thấy";
+        }
+    </script>
+    
 </head>
 <body class="">
-    <div class="header">
-        <div class="logo">
-            <img src="../image/logo.png" alt="">
-        </div>
-        <div class="menu">
-            <li><a href="../index.html">home</a></li>
-            <li><a href="../html/productList.html">product</a></li>
-            <li><a href="../html/contact.html">contact</a></li>
-            <li><a href="../html/about.html">about</a></li>
-            <li><a href="../html/pay.html">cart</a></li>
-        </div>
-        <div class="icon">
-                <div class="signOut">
-                    <a href="../html/login.html">
-                        LOGOUT
-                    </a>
-                </div>
+    <!-- Header -->
+<div class="header">
+    <div class="logo">
+        <img src="../img/logo.png" alt="Logo">
+    </div>
+    <ul class="menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../html/productList.html">Products</a></li>
+        <li><a href="../html/contact.html">Contact</a></li>
+        <li><a href="../html/Blog.html">Blog</a></li> 
+        <li><a href="../html/about.html">About</a></li>
+        <li><a href="../html/pay.html">Cart</a></li>
+    </ul>
+    <div class="icon">
+        <div class="signOut">
+            <a href="../html/login.html">LOGOUT</a>
         </div>
     </div>
+</div>
+
     <div class="ctn_product">
         <div class="ctn_product_img">
             
@@ -53,72 +99,77 @@
                 <p>30-day returns, 12-month extended warranty.</p>
                 <p>‍Have questions? Visit our <a href="#"><u>Support</u></a> for more info.</p>
                 <div>
-                    <img src="../image/cdn_gobal.svg" alt="">
-                    <img src="../image/paypal.svg" alt="">
-                    <img src="../image/visa.svg" alt="">
+                    <img src="../img/cdn_gobal.svg" alt="">
+                    <img src="../img/paypal.svg" alt="">
+                    <img src="../img/visa.svg" alt="">
                 </div>
             </div>
         </div>
     </div>
+   
     <div class="footer">
-        <div class="logo_end"><img src="../img/logo.png" alt="" ></div>
-        <div class="subscribe_title">
-
-        </div>     
-       <div class="subscribe">
-           <div class="search">
-            <input type="text" placeholder="Input yor email">  
-            <i class="fa-regular fa-envelope"></i>
-           </div>
-            <input type="submit" value="Subscribe">
-       </div>
-       <div class="list">
-        <div class="list_link">
-            <p><b>Product</b></p>
-            <ul>
-                <li>Features</li>
-                <li>Pricing</li>
-            </ul>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="../img/logo.png" alt="Audora Music Logo" class="logo-img">
+                </div>
+                <div class="footer-subscribe">
+                    <p>Stay updated with our latest offers and news</p>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email" aria-label="Email for subscription">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="../html/productList.html">Product</a></li>
+                        <li><a href="../html/productList.html">New Arrivals</a></li>
+                        <li><a href="../html/productList.html">Best Sellers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../html/about.html">About Us</a></li>
+                        <li><a href="../html/about.html">Careers</a></li>
+                        <li><a href="../html/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../html/Blog.html">Blog</a></li>
+                        <li><a href="../html/contact.html">FAQs</a></li>
+                        <li><a href="../html/contact.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../html/about.html">Privacy Policy</a></li>
+                        <li><a href="../html/about.html">Terms of Service</a></li>
+                        <li><a href="../html/about.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="footer-info">
+                    <p>© 2024 Adora Music, Inc. All rights reserved.</p>
+                </div>
+            </div>
         </div>
-        <div class="list_link">
-            <p><b>Resources</b></p>
-            <ul>
-                <li>Blog</li>
-                <li>User guildes</li>
-                <li>Webinars</li>
-            </ul>
-        </div>
-        <div class="list_link">
-            <p><b>Conpany</b></p>
-            <ul>
-                <li>About us </li>
-                <li>Contact us</li>
-            </ul>
-        </div>
-        <div class="list_link">
-            <p><b>Plans & Pricing</b></p>
-            <ul>
-                <li>Personal</li>
-                <li>Start up</li>
-                <li>Organization</li>
-            </ul>
-        </div>
-       </div>
-       <div class="end">
-        <select name="" id="" value="1">
-            <option value="1">English</option>
-            <option value="2">Vietnamese</option>
-        </select>
-        <div class="end_center">
-            <p>@ 2022 Brand,Inc. • Privacy • Terms • Sitemap</p>
-        </div>
-        <div class="icon_link">
-                <a href="#" style="color: rgb(85, 192, 245)"> <i class="fa-brands fa-twitter"></i></a>
-                <a href="#"style="color: blue"> <i class="fa-brands fa-facebook"></i></a>
-                <a href="#" style="color: rgb(83, 83, 185)">  <i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"style="color: red"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-       </div>
     </div>
     <script src="../jquery/detail.js"></script>
 </body>

@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     transition: 0.3s;
+    font-family: Poppins;
 }
 .header{
     width: 100%;
@@ -11,7 +12,7 @@
     justify-content: space-around;
     align-items: center;
     text-transform: uppercase;
-    background-color: white;
+    background-color: #000;
     border-bottom: 1px solid black;
 }
 .menu{
@@ -27,7 +28,7 @@
 }
 .header a{
     display: block;
-    color: black;
+    color: rgb(244, 241, 241);
     height: 100%;
     padding: 15.5px 15px;
 }

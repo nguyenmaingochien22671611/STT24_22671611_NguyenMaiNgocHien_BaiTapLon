@@ -1,0 +1,86 @@
+/* CSS cho phần menu */
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu li {
+    position: relative;
+    display: inline-block;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* Mũi tên cho Blog */
+.menu li .dropbtn {
+    display: flex;
+    align-items: center;
+}
+
+.menu li .dropbtn i {
+    margin-left: 5px;
+    font-size: 0.8em;  /* Điều chỉnh kích thước mũi tên */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hiệu ứng hover cho mũi tên */
+.menu li:hover .dropbtn i {
+    transform: rotate(180deg);  /* Xoay mũi tên khi hover */
+}
+
+.menu li a:hover {
+    background-color: #fdfbfa;
+    transition: background-color 0.3s;
+}
+
+/* Phần dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #030303;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    top: 100%;
+    left: 0;
+    text-align: left;
+}
+
+.dropdown-content li {
+    padding: 10px 20px;
+    text-transform: none;
+}
+
+.dropdown-content li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hiển thị dropdown khi hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hiệu ứng hover cho các mục trong dropdown */
+.dropdown-content li a:hover {
+    background-color: #9d3214;
+    padding-left: 10px;
+}
+
+/* Thêm hiệu ứng hover */
+.menu li a:hover, .dropdown:hover .dropbtn {
+    background-color: #090909;
+}

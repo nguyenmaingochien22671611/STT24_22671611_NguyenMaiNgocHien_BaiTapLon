@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>Kinh nghiệm Piano</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins';
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            height: 60px;
+            width: 100%;
+            align-items: center;
+            justify-content: space-around;
+            text-transform: uppercase;
+            background-color: #070707;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
+        .header a {
+            display: block;
+            color: white;
+            padding: 15.5px 15px;
+            text-decoration: none; 
+        }
+
+        .logo {
+            overflow: hidden;
+            height: 100%;
+            width: 80px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo img {
+            position: relative;
+            top: -15px;
+            height: 100px;
+        }
+
+        .icon {
+            display: flex;
+            padding: 10px 15px;
+            align-items: center;
+        }
+
+        .signOut a {
+            height: 100%;
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+
+        .signOut a:hover {
+            opacity: 0.8;
+            transform: scale(0.9);
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu li {
+            position: relative;
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header a {
+            display: block;
+            color: white;
+            padding: 15.5px 15px;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 900px;
+            margin: 100px auto 0;
+            padding: 20px;
+        }
+
+        .blog-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .blog-post {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-post h2 {
+            font-size: 24px;
+            color: #85210d;
+        }
+
+        .blog-post p {
+            font-size: 16px;
+            color: #555;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        .blog-post img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #131313;
+            color: #ddd;
+            padding: 40px 20px;
+           
+        }
+
+        .footer a {
+            color: #e7e5e4;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .social-icons a {
+            color: #ebe5e1;
+            margin: 0 10px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .footer .social-icons a:hover {
+            color: #fff;
+        }
+
+        .footer p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="logo">
+        <img src="../img/logo.png" alt="Logo">
+    </div>
+    <ul class="menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../html/productList.html">Products</a></li>
+        <li><a href="../html/contact.html">Contact</a></li>
+        <li><a href="../html/Blog.html">Blog</a></li> 
+        <li><a href="../html/about.html">About</a></li>
+        <li><a href="../html/pay.html">Cart</a></li>
+    </ul>
+    <div class="icon">
+        <div class="signOut">
+            <a href="../html/login.html">LOGOUT</a>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="blog-title">Piano Phù Hợp Cho Căn Phòng Của Bạn</div>
+
+        <div class="blog-post">
+            <img src="../img/blog1.jpg" alt="">
+            <p>Khi đã đọc tới bài viết này, chắc hẳn bạn đã quyết định sẽ mua một chiếc piano rồi phải không nào? Và hẳn bạn đang háo hức mong chờ được dành hàng giờ thoả mãn niềm đam mê âm nhạc bên những người thân yêu. Tuy nhiên, bạn có thể sẽ cảm thấy khó khăn khi chọn lựa một chiếc đàn phù hợp với những điều kiện và tiêu chí của mình, bởi piano là loại nhạc cụ muôn hình vạn trạng. Cây đàn hoàn hảo hiển nhiên phải trông thật oách và nghe thật hay, nhưng khoan, 
+            điều quan trọng nhất chúng ta phải đưa vào cân nhắc khi mua đàn chính là kích cỡ phải vừa với vị trí định đặt của bạn. Hơn nữa, chất lượng âm thanh của đàn còn bị ảnh hưởng bởi các yếu tố khác như diện tích của căn phòng, hướng đặt và cách đặt đàn. Thật là nhiều những điều phức tạp và rối rắm! Nhưng đừng lo, chúng tôi ở đây để giúp bạn tìm được chiếc đàn phù hợp nhất, cho dù bạn sống trong một căn hộ ấm áp hay một ngôi nhà sang trọng!</p>
+            <h2>Các Loại Đàn Piano Cơ</h2>
+            <p>Như đã đề cập đến trong những bài viết trước, có 2 loại đàn phổ biến nhất là: piano upright và piano grand. Sự khác biệt dễ nhận thấy nhất giữa chúng là kích cỡ (piano grand lớn hơn piano upright), nhưng chúng cũng có những nét riêng phụ thuộc vào vị trí của bảng âm và độ căng dây. Do bảng âm của piano grand được đặt ngang, nên những chiếc đàn này sẽ có dấu ấn đặc trưng hơn so với những chiếc đàn piano upright, cụ thể thì trông chúng ‘hộp’ hơn. Vì vậy, khi chọn lựa loại đàn, bạn cần phải cân nhắc không chỉ về kích thước mà còn về thiết kế nội thất trong phòng bạn.</p>
+            <img src="../img/Đàn piano Yamaha U1A.png" alt="">
+            <p>Piano grand là sự lựa chọn yêu thích của những nghệ sĩ chuyên nghiệp bởi chúng có âm thanh nổi bật và ‘đậm’ hơn so với piano upright, ngoại trừ chiếc piano upright Yamaha YUS Series có một loạt các âm sắc khá giống piano grand. Ngược lại, piano upright lại nhỏ gọn, đỡ tốn diện tích và có giá phải chăng hơn, 
+            nên chúng được ưa chuộng bởi học sinh âm nhạc và các trường học trên khắp mọi nơi trên thế giới.</p>
+            <img src="../img/Đàn Piano Yamaha UX30A.jpg" alt="">
+            <h2>Kích thước đàn piano cơ</h2>
+            <p>Piano grand có nhiều kích cỡ khác nhau, từ size ‘baby’ dài 4 ½ feet cho đến size ‘concert’ có thể dài tới 9 feet. (Lưu ý: độ dài piano grand được đo từ key slip - miếng gỗ trước bàn phím - cho đến đoạn cuối của nắp đàn). Piano upright cũng có nhiều kích cỡ khác nhau, từ nhỏ nhất là ‘spinet’ (đã từng rất phổ biến vào những thập kỷ trước) cho đến ‘console’ và ‘studio’, với chiều cao lên tới trên 52 feet. Đặc biệt, gần như tất cả các loại đàn - bao gồm cả upright và grand- đều rộng khoảng 5 feet, bởi chúng đều có 88 phím đàn. Yamaha sản xuất đa dạng các loại piano grand, từ GB1K và GC Series baby grand (với các loại đàn dài 5’, 5’3’’, và 5’8’’), cho tới CX Series và SX Series (với chiều dài từ 5’3’’ cho tới 7’6’’), 
+            và mẫu đàn nổi tiếng toàn cầu CF Series của grand concert (với độ dài từ 6’3’’ đến 9’). Piano upright của Yamaha đa dạng về chủng loại, từ P22 và B Series nhỏ gọn, dành cho người mới chơi cho đến U Series - dòng đàn upright phổ biến nhất thế giới - cho đến YUS Series hàng đầu nói trên. Chiều cao của những cây đàn piano này thay đổi từ 45 "đến 52", và chiều sâu của chúng thay đổi từ chỉ 21 "đến 26". Độ sâu đặc biệt quan trọng vì như chúng ta sẽ thấy, những cây đàn piano upright được thiết kế để đặt dựa vào tường.</p>
+            <img src="../img/blog1.1.webp" alt="">
+            <h2>Vị trí đặt piano</h2>
+            <p>Như đã đề cập từ trước, đàn piano upright được thiết kế để đặt dựa vào tường. Vị trí này không chỉ mang lại âm thanh tối ưu mà còn giúp bạn tận dụng tốt nhất không gian có sẵn, đặc biệt là trong các phòng nhỏ. (Về mặt thẩm mỹ, mặt sau của những cây đàn piano upright thường không được bắt mắt). Mặt khác, những piano grand cho âm thanh tốt nhất khi chúng ở giữa phòng hoặc đặt ở góc 45 độ trong một góc phòng. 
+            Tuy nhiên, là người đặt đàn, bạn sẽ muốn chắc chắn rằng nghệ sĩ piano - đặc biệt nếu đó là bạn! - có thể nhìn thấy phần còn lại của căn phòng (hoặc thậm chí có thể ra ngoài cửa sổ) thay vì phải quay mặt vào tường. Điều quan trọng nữa là phải bảo vệ đàn piano của bạn khỏi bất kỳ sự thay đổi khí hậu đột ngột nào có thể gây hại cho nhạc cụ. Ví dụ, bạn không bao giờ nên đặt đàn piano dưới ánh sáng mặt trời trực tiếp. Mặc dù đặt nó gần cửa sổ có thể trông đẹp mắt về mặt thẩm mỹ, nhưng sức nóng của mặt trời có thể dễ dàng làm hỏng nó. Tương tự, không nên đặt nó gần các lỗ thông hơi, vì bất kỳ sự thay đổi nhiệt độ nào cũng sẽ ảnh hưởng đến thiết bị.</p>
+        </div>
+        
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="../img/logo.png" alt="Audora Music Logo" class="logo-img">
+                </div>
+                <div class="footer-subscribe">
+                    <p>Stay updated with our latest offers and news</p>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email" aria-label="Email for subscription">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="../html/productList.html">Product</a></li>
+                        <li><a href="../html/productList.html">New Arrivals</a></li>
+                        <li><a href="../html/productList.html">Best Sellers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../html/about.html">About Us</a></li>
+                        <li><a href="../html/about.html">Careers</a></li>
+                        <li><a href="../html/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../html/Blog.html">Blog</a></li>
+                        <li><a href="../html/contact.html">FAQs</a></li>
+                        <li><a href="../html/contact.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../html/about.html">Privacy Policy</a></li>
+                        <li><a href="../html/about.html">Terms of Service</a></li>
+                        <li><a href="../html/about.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="footer-info">
+                    <p>© 2024 Adora Music, Inc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

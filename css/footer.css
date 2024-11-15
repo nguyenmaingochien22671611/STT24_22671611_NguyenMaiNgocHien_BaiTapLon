@@ -1,108 +1,150 @@
+/* Cài đặt chung cho footer full màn hình */
+.footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    width: 100%; /* Đảm bảo footer full màn hình */
+    box-sizing: border-box;
+}
 
-/* */
-.footer{
-    width: 100%;
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    row-gap: 50px;
-    background: #171717;
-    color: white;
-   
-  }
-  .footer .logo_end{
-      margin-top: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-     
-  }.footer .subscribe .search{
-      position: relative;
-  }
-  .footer .subscribe i{
-      position: absolute;
-      left: 12px;
-      top: 10px;
-  }
-  .footer .subscribe_title,.footer .subscribe{
-      width: fit-content;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-  }
-  .footer input[type="text"]{
-    position: relative;
-      width: 250px;
-      right: -5px;
-      height: 38px;
-      border-radius: 5px;
-      padding-left: 35px;
-      outline: none;
-      border: #171717;
-      background-color: #f3f4f6;
-  }
-  .footer input[type="submit"]{
-    background: blue;
-    color: azure;
-     
-      outline: none;
-      border: #171717;
-      
-      display: block;
-      height: 29px;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      padding: 0 10px;
-      width: 120px;
-      height: 38px;
-      cursor: pointer;
-  }
-  .footer input[type="submit"]:hover{
-    background: azure;
-    color: black;
-  }
-  .footer .list{
-      display: flex;
-      justify-content: center;
-      gap: 80px;
-  }
-  .footer .list_link p{
-  
-      margin-bottom: 15px;
-  }
-  .footer .list .list_link li{
-      list-style: none;
-      margin-bottom: 10px;
-  }
-  .footer select{
-      height: 30px;
-      width: 120px;
-      background-color: #f3f4f6;
-      border: #f3f4f6;
-  }
-  .footer .end{
-      display: flex;
-      align-items: center;
-      justify-content: space-between ;
-      padding: 20px  60px;
-  
-     
-  }
-  .footer .end_center{
-      display: flex;
-      align-items: center;
-     
-     
-  }
-  .footer .icon_link{
-      font-size: 25px;
-  }
-  i,img{
-  cursor: pointer;
-  }
-  @media screen and ( max-width : 1440px) {
-    .footer .end_center{
+}
 
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.footer-logo .logo-img {
+    max-width: 140px;
+}
+
+.footer-subscribe p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 8px;
+}
+
+.subscribe-form input[type="email"] {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #666;
+    color: #333;
+    background-color: #fff;
+}
+
+.subscribe-form button {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.subscribe-form button {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.subscribe-form button:hover {
+    background-color: #e65c00; 
+    color: #ffffff; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 160px;
+    margin: 0 10px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.footer-social a {
+    color: #ffffff;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.footer-social a:hover {
+    color: #ff6600;
+}
+
+.footer-info {
+    font-size: 13px;
+    text-align: right;
+}
+
+/* Đảm bảo footer full màn hình trên mọi thiết bị */
+@media (max-width: 768px) {
+    .footer-top, .footer-bottom {
+        flex-direction: column;
+        text-align: center;
     }
-  }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

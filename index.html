@@ -11,144 +11,155 @@
 <body>
     <div class="header">
         <div class="logo">
-            <img src="./image/logo.png" alt="">
+            <img src="../img/logo.png" alt="Logo">
         </div>
-        <div class="menu">
-            <li><a href="#top">home</a></li>
-            <li><a href="./html/productList.html">product</a></li>
-            <li><a href="./html/contact.html">contact</a></li>
-            <li><a href="./html/about.html">about</a></li>
-            <li><a href="./html/pay.html">cart</a></li>
-        </div>
+        <ul class="menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../html/productList.html">Products</a></li>
+            <li><a href="../html/contact.html">Contact</a></li>
+            <li><a href="../html/Blog.html">Blog</a></li> 
+            <li><a href="../html/about.html">About</a></li>
+            <li><a href="../html/pay.html">Cart</a></li>
+        </ul>
         <div class="icon">
-                <div class="signOut">
-                    <a href="./html/login.html">
-                        LOGOUT
-                    </a>
-                </div>
+            <div class="signOut">
+                <a href="../html/login.html">LOGOUT</a>
+            </div>
         </div>
     </div>
-    <div class="banner" id="top">
-        <p>Nguyen Huy Nike is a race like no other. Nguyen Huy Nike once again celebrates the spirit 
-            of this event with shoes to support its runners.</p>
+        <div class="icon">
+            <div class="search-container">
+    
+                <input type="text" id="search-input" placeholder="Search products..." />
+                <i class="fa fa-search" id="search-icon"></i>
+            </div>
+            <div class="signOut">
+                <a href="./html/login.html">LOGOUT</a>
+            </div>
+        </div>
     </div>
+
+    <div class="banner" id="top">
+        <p><span style="color: #9d3214; font-weight: bold; font-size: larger;" >"Âm nhạc không chỉ là sở thích, mà còn là cảm hứng sống—chúng tôi mang đến cho bạn những nhạc cụ chất lượng, giúp bạn chạm đến những giai điệu đam mê."</span></p>
+    </div>
+
     <div class="sp" id="sp">
         <div class="sp_t">
             <h2>PRODUCTS</h2>
         </div>
         <div class="sp_bt">
             <ul>
-                <li >
-                        <img src="./image/1.webp" alt="">
-                        <p>Jordan Primeum v1</p>
-                        <span>$300</span>
+                <li>
+                    <img src="./img/Đàn Piano Điện Casio GP 500.jpg" alt="">
+                    <p>Đàn Piano Điện Casio GP 500</p>
+                    <span>90,000,000</span>
                 </li>
-                <li >
-                    <img src="./image/2.webp" alt="">
-                    <p>Jordan Essentials</p>
-                    <span>$250</span>
-            </li>
-            <li >
-                <img src="./image/3.webp" alt="">
-                <p>Nike Jordan Sportswear </p>
-                <span>$209</span>
-        </li>
-        <li >
-            <img src="./image/4.webp" alt="">
-            <p>Nike Champion Primeum</p>
-            <span>$20</span>
-            </li>
+                <li>
+                    <img src="./img/Đàn piano Yamaha U1A.png" alt="">
+                    <p>Đàn piano Yamaha U1A</p>
+                    <span>75,000,000đ</span>
+                </li>
+                <li>
+                    <img src="./img/Đàn Piano Yamaha UX30A.jpg" alt="">
+                    <p> Đàn Piano Yamaha UX30A</p>
+                    <span>159,500,000đ</span>
+                </li>
+                <li>
+                    <img src="./img/Đàn Piano Điện Casio AP-460 BN.jpg" alt="">
+                    <p>Đàn Piano Điện Casio AP-460 BN</p>
+                    <span>13,500,000đ</span>
+                </li>
             </ul>
-           
         </div>
         <button><a href="./html/productList.html">Show more</a></button>
     </div>
+
     <div class="tt" id="tt">
         <div class="tt_t">
-            <h2><b>The Essentials</b></h2>
+            <h2><b>Sản phẩm nổi bật</b></h2>
         </div>
         <div class="tt_bt">
             <ul>
                 <li>
-                        <img src="./image/es1.webp" alt="">
-                        <p><b>Men's</b></p>
-                       
+                    <img src="./img/Đàn piano Yamaha U1A.png" alt="">
+                    <p><b>Đàn piano Yamaha U1A</b></p>
                 </li>
                 <li>
-                    <img src="./image/es2.jpg" alt="">
-                    <p><b>Women's</b></p>
-            </li>
-            <li>
-                <img src="./image/es3.jpg" alt="">
-                <p><b>Kid's</b></p>
-        </li>
-               
+                    <img src="./img/Đàn Piano Yamaha UX30A.jpg" alt="">
+                    <p><b>Đàn Piano Yamaha UX30A</b></p>
+                </li>
+                <li>
+                    <img src="./img/Đàn Piano Điện Casio GP 500.jpg" alt="">
+                    <p><b>Đàn Piano Điện Casio GP 500</b></p>
+                </li>
             </ul>
-           
         </div>
-        <button><a href="">Show more</a></button>
+        <button><a href="./html/productList.html">Show more</a></button>
     </div>
-  
-    <div class="footer">
-        <div class="logo_end"><img src="./img/logo.png" alt="" ></div>
-        <div class="subscribe_title">
-           
 
-        </div>     
-       <div class="subscribe">
-           <div class="search">
-            <input type="text" placeholder="Input yor email">  
-            <i class="fa-regular fa-envelope"></i>
-           </div>
-            <input type="submit" value="Subscribe">
-       </div>
-       <div class="list">
-        <div class="list_link">
-            <p><b>Product</b></p>
-            <ul>
-                <li>Features</li>
-                <li>Pricing</li>
-            </ul>
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="./img/logo.png" alt="Audora Music Logo" class="logo-img">
+                </div>
+                <div class="footer-subscribe">
+                    <p>Stay updated with our latest offers and news</p>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email" aria-label="Email for subscription">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="./html/productList.html">Product</a></li>
+                        <li><a href="./html/productList.html">New Arrivals</a></li>
+                        <li><a href="./html/productList.html">Best Sellers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="./html/about.html">About Us</a></li>
+                        <li><a href="./html/about.html">Careers</a></li>
+                        <li><a href="./html/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="./html/Blog.html">Blog</a></li>
+                        <li><a href="./html/contact.html">FAQs</a></li>
+                        <li><a href="./html/contact.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="./html/about.html">Privacy Policy</a></li>
+                        <li><a href="./html/about.html">Terms of Service</a></li>
+                        <li><a href="./html/about.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="footer-info">
+                    <p>© 2024 Adora Music, Inc. All rights reserved.</p>
+                </div>
+            </div>
         </div>
-        <div class="list_link">
-            <p><b>Resources</b></p>
-            <ul>
-                <li>Blog</li>
-                <li>User guildes</li>
-                <li>Webinars</li>
-            </ul>
-        </div>
-        <div class="list_link">
-            <p><b>Conpany</b></p>
-            <ul>
-                <li>About us </li>
-                <li>Contact us</li>
-            </ul>
-        </div>
-        <div class="list_link">
-            <p><b>Plans & Pricing</b></p>
-            <ul>
-                <li>Personal</li>
-                <li>Start up</li>
-                <li>Organization</li>
-            </ul>
-        </div>
-       </div>
-       <div class="end">
-        <select name="" id="" value="1">
-            <option value="1">English</option>
-            <option value="2">Vietnamese</option>
-        </select>
-        <div class="end_center">
-            <p>@ 2022 Brand,Inc. • Privacy • Terms • Sitemap</p>
-        </div>
-        <div class="icon_link">
-                <a href="#" style="color: rgb(85, 192, 245)"> <i class="fa-brands fa-twitter"></i></a>
-                <a href="#"style="color: blue"> <i class="fa-brands fa-facebook"></i></a>
-                <a href="#" style="color: rgb(83, 83, 185)">  <i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"style="color: red"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-       </div>
     </div>
 </body>
 </html>

@@ -7,91 +7,294 @@
     <link rel="stylesheet" href="../css/abct.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Poppins;
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            width: 100%;
+            height: 60px;   
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-transform: uppercase; 
+            background-color: black;
+            border-bottom: 1px solid black;
+            z-index: 10;
+            overflow: hidden;
+            position: fixed;
+        }
+        .menu{
+            display: flex;
+        }
+        .menu li{
+            position: relative;
+            display: inline-block;
+            justify-content: center;
+            align-items: center;  
+        }
+        .menu li a::after{
+            content: '';
+            height: 5px;
+            width: 0;
+            background: white;
+            position: absolute;
+            left: 0;
+            bottom: 3px;
+            transition: 0.5s;
+        }
+        .menu li a:hover::after{
+            width: 100%;
+            transition: all 0.8s;
+        }
+        .header a{
+            display: block;
+            color: white;
+            padding: 15.5px 15px;
+        }
+        .logo{
+            overflow: hidden;
+            height: 100%;
+            width: 80px;
+            display: flex;
+            justify-content: center;
+        }
+        .logo img{
+            position: relative;
+            top: -15px;
+            height: 100px;
+        }
+        .icon{
+            display: flex;
+            padding: 10px 15px;
+            align-items: center;
+        }
+        .signOut a{
+            height: 100%;
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+        .signOut a:hover{
+            opacity: 0.8;
+            transform: scale(0.9);
+        }
+        .namePage {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .contact-form,
+        .map {
+            flex: 1;
+            max-width: 500px;
+            margin: 0 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            height: 450px;
+            box-sizing: border-box;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact-form input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        
 
-    <title>Document</title>
+        
+    </style>
+    <script>
+         $(document).ready(function() {
+            $('#btnDK').on('click', function() {
+                $('#myModal').modal('show');
+            });
+        $('#txtHT').on('blur', function() {
+                const ten = $(this).val();
+                const regexTen = /^[A-Z][a-z]*(\s[A-Z][a-z]*)*$/;
+                if (!regexTen.test(ten)) {
+                    $('#tbTen').text('Tên không hợp lệ');
+                } else {
+                    $('#tbTen').text('*');
+                }
+            });
+
+            $('#txtTel').on('blur', function() {
+                const tel = $(this).val();
+                const regexTel = /^0\d{3}-\d{3}-\d{3}$/;
+                if (!regexTel.test(tel)) {
+                    $('#tbTel').text('SĐT không hợp lệ');
+                } else {
+                    $('#tbTel').text('*');
+                }
+            });
+
+            $('#txtDC').on('blur', function() {
+                const email = $(this).val();
+                const regexEmail = /^[a-zA-Z0-9._%+-]+@iuh\.edu\.vn$/;
+                if (!regexEmail.test(email)) {
+                    $('#tbEmail').text('Email không hợp lệ');
+                } else {
+                    $('#tbEmail').text('*');
+                }
+            });
+
+            $('#btnSave').on('click', function() {
+                if (
+                    $("#tbTen").text() === "*" &&
+                    $("#tbTel").text() === "*" &&
+                    $("#tbEmail").text() === "*"
+                ) {
+                    const stt = $("#tbDanhSach tr").length; 
+                    const newRow = `
+                        <tr>
+                            <td>${$("#txtHT").val()}</td>
+                            <td>${$("#txtTel").val()}</td>
+                            <td>${$("#txtDC").val()}</td>
+                        </tr>`;
+                    $("#tbDanhSach").append(newRow);
+                    $("#myModal").modal("hide");
+                } else {
+                    alert('Vui lòng nhập đầy đủ và đúng các trường thông tin!');
+                }
+            });
+        });
+
+    </script>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">
-            <img src="../image/logo.png" alt="">
-        </div>
-        <div class="menu">
-            <li><a href="../index.html">home</a></li>
-            <li><a href="../html/productList.html">product</a></li>
-            <li><a href="../html/contact.html">contact</a></li>
-            <li><a href="../html/about.html">about</a></li>
-            <li><a href="../html/pay.html">cart</a></li>
-        </div>
-        <div class="icon">
-                <div class="signOut">
-                    <a href="../html/login.html">
-                        LOGOUT
-                    </a>
-                </div>
+    <!-- Header -->
+<div class="header">
+    <div class="logo">
+        <img src="../img/logo.png" alt="Logo">
+    </div>
+    <ul class="menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../html/productList.html">Products</a></li>
+        <li><a href="../html/contact.html">Contact</a></li>
+        <li><a href="../html/Blog.html">Blog</a></li> 
+        <li><a href="../html/about.html">About</a></li>
+        <li><a href="../html/pay.html">Cart</a></li>
+    </ul>
+    <div class="icon">
+        <div class="signOut">
+            <a href="../html/login.html">LOGOUT</a>
         </div>
     </div>
-    <h1 class="namePage">
-        Contact
-    </h1>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31352.9634841764!2d106.60513107431643!3d10.802086899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294f999195e7%3A0x8ba9d727d2017344!2zTmlrZSBPdXRsZXQgQ-G7mW5nIEjDsmE!5e0!3m2!1svi!2s!4v1703920665283!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    <div class="footer">
-        <div class="logo_end"><img src="../img/logo.png" alt="" ></div>
-        <div class="subscribe_title">
+</div>
 
-        </div>     
-       <div class="subscribe">
-           <div class="search">
-            <input type="text" placeholder="Input yor email">  
-            <i class="fa-regular fa-envelope"></i>
-           </div>
-            <input type="submit" value="Subscribe">
-       </div>
-       <div class="list">
-        <div class="list_link">
-            <p><b>Product</b></p>
-            <ul>
-                <li>Features</li>
-                <li>Pricing</li>
-            </ul>
+    <h1 class="namePage">Contact Us</h1>
+    <div class="container">
+        <div class="contact-form">
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <input type="submit" value="Contact">
+            </form>
         </div>
-        <div class="list_link">
-            <p><b>Resources</b></p>
-            <ul>
-                <li>Blog</li>
-                <li>User guildes</li>
-                <li>Webinars</li>
-            </ul>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31348.405877099074!2d106.62780088098295!3d10.845652404214006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529affe2c5523%3A0x3f7470640a0d52b!2zcGjGsOG7nW5nIDE2LCBHw7IgVuG6pXAsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1731575663358!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></>" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="list_link">
-            <p><b>Conpany</b></p>
-            <ul>
-                <li>About us </li>
-                <li>Contact us</li>
-            </ul>
-        </div>
-        <div class="list_link">
-            <p><b>Plans & Pricing</b></p>
-            <ul>
-                <li>Personal</li>
-                <li>Start up</li>
-                <li>Organization</li>
-            </ul>
-        </div>
-       </div>
-       <div class="end">
-        <select name="" id="" value="1">
-            <option value="1">English</option>
-            <option value="2">Vietnamese</option>
-        </select>
-        <div class="end_center">
-            <p>@ 2022 Brand,Inc. • Privacy • Terms • Sitemap</p>
-        </div>
-        <div class="icon_link">
-                <a href="#" style="color: rgb(85, 192, 245)"> <i class="fa-brands fa-twitter"></i></a>
-                <a href="#"style="color: blue"> <i class="fa-brands fa-facebook"></i></a>
-                <a href="#" style="color: rgb(83, 83, 185)">  <i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"style="color: red"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-       </div>
     </div>
+
+</div>
+</div>
+</div>
+
+<div class="footer">
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="../img/logo.png" alt="Audora Music Logo" class="logo-img">
+            </div>
+            <div class="footer-subscribe">
+                <p>Stay updated with our latest offers and news</p>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" aria-label="Email for subscription">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="../html/productList.html">Product</a></li>
+                    <li><a href="../html/productList.html">New Arrivals</a></li>
+                    <li><a href="../html/productList.html">Best Sellers</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="../html/about.html">About Us</a></li>
+                    <li><a href="../html/about.html">Careers</a></li>
+                    <li><a href="../html/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="../html/Blog.html">Blog</a></li>
+                    <li><a href="../html/contact.html">FAQs</a></li>
+                    <li><a href="../html/contact.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="../html/about.html">Privacy Policy</a></li>
+                    <li><a href="../html/about.html">Terms of Service</a></li>
+                    <li><a href="../html/about.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-social">
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="footer-info">
+                <p>© 2024 Adora Music, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>
